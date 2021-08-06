@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import axios  from 'axios';
+import {useEffect, useState} from 'react';
 
 function App() {
+  const [students, setStudents] = useState([]);
+
+  useEffect(()=>{
+    (async ()=> {
+      const result = await getData();
+      setStudents(result.students);
+    })()
+  },[]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {
+          students.map( student => { return (
+            <div>
+              <img src={student.pic} alt="student"/>
+              <p>{student.firstName} {student.lastName}</p>
+              <p>{student.email}</p>
+              <p>{student.company}</p>
+              <p>{student.skill}</p>
+              <p>{student.grades.reduce((acc, x) => (
+                  parseFloat(acc) + parseFloat(x))) / student.grades.length
+                }
+              </p>
+            </div>
+          )})
+        }
     </div>
   );
 }
 
 export default App;
+
+async function getData(){
+  try{
+    const result = await axios.get(`https://api.hatchways.io/assessment/students`);
+    return result.data
+
+  } catch (error){
+    console.log(error);
+  }
+}
