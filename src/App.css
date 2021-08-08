@@ -61,7 +61,6 @@ body{
   border-bottom: .10px solid rgb(218, 218, 218);
 }
 
-
 .student-card-avatar{
   display: flex;
   flex-direction: column;
@@ -86,6 +85,7 @@ img{
   padding-left: 10px;
   padding-bottom: 20px;
 }
+
 .student-name{
   font-weight: 700;
   margin: 10px 0;
@@ -94,7 +94,6 @@ img{
 p{
   margin: 5px;
 }
-
 
 .student-accordion{
   margin-left: auto;
@@ -105,7 +104,6 @@ p{
 }
 
 .student-accordion-icon{
-  /* display: flex; */
   height: 50px;
   width: 50px;
   margin-top: -5px;
