@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap');
 .App {
   text-align: center;
   display:flex;
@@ -27,19 +26,20 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(150, 150, 150); 
 }
+
 .container{
   margin-top: 15%;
   background-color: white;
   border-radius: 10px;
-  width: 500px;
-  height: 500px;
+  width: 700px;
+  height: 550px;
   overflow-y: scroll;
 }
 
 .student-card{
   color:black;
   display: flex;
-  border-bottom: .25px solid black;
+  border-bottom: .10px solid rgb(218, 218, 218);
 }
 
 .student-card-avatar{
@@ -47,8 +47,8 @@ body{
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-
 }
+
 img{
   width: 100px;
   height: 100px;
@@ -56,5 +56,21 @@ img{
   border-style: solid;
   border-width: 1px;
   border-color: rgb(189, 189, 189);
-  
+}
+
+.student-text{
+  text-align: start;
+}
+
+.student-details{
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+.student-name{
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+p{
+  margin: 5px;
 }
