@@ -101,8 +101,15 @@ p{
   display: flex;
   font-size: 50px;
   color: rgb(189, 189, 189);
+  text-align: center;
 }
 
+.student-accordion-icon{
+  /* display: flex; */
+  height: 50px;
+  width: 50px;
+  margin-top: -5px;
+}
 .student-accordion-icon:hover{
   cursor: pointer;
   color: black;

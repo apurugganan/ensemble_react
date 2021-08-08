@@ -30,11 +30,12 @@ function App() {
           students.filter(student => {
             if(searchTerm === ""){
               return student;
-
             } else if (
               student.firstName.toLowerCase().includes(searchTerm.toLocaleLowerCase()) || 
               student.lastName.toLowerCase().includes(searchTerm.toLocaleLowerCase())){
               return student;
+            } else {
+              return null;
             }
             })
             // Display List of Student Cards 
