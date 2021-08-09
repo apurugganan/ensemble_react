@@ -6,6 +6,9 @@ import Card from './Card'
 function App() {
   const [students, setStudents] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [searchTag, setSearchTag] = useState("");
+
+
 
   // Get data from API
   useEffect(()=>{
@@ -25,23 +28,33 @@ function App() {
             onChange={event =>{setSearchTerm(event.target.value)} }
             />
         </div>
+        <div>
+        <input className="search-bar-tag-input"
+            type="text" 
+            placeholder="Search by Tag"
+            onChange={event =>{setSearchTag(event.target.value)} }
+            />
+        </div>
         {
           // Search by Name feature
           students.filter(student => {
             if(searchTerm === ""){
               return student;
             } else if (
-              student.firstName.toLowerCase().includes(searchTerm.toLocaleLowerCase()) || 
-              student.lastName.toLowerCase().includes(searchTerm.toLocaleLowerCase())){
+                student.firstName.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+                || student.lastName.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+                // || tags.indexOf 
+              ){
+             
               return student;
             } else {
               return null;
             }
             })
             // Display List of Student Cards 
-            .map( student => { return (
+            .map( (student, index) => { return (
             // Student Card 
-            <Card student={student}/>
+            <Card student={student} key={index} tags={[]}/>
           )})
         }
       </div>

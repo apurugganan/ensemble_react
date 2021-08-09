@@ -42,7 +42,7 @@ body{
   padding: 15px;
 }
 
-.search-bar-input{
+.search-bar-input, .tag-form-input{
   width: 100%;
   border-style: none;
   border-color: none;
@@ -51,7 +51,7 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 
-.search-bar-input:focus{
+.search-bar-input:focus, .tag-form-input:focus{
   outline: none;
 }
 
@@ -114,5 +114,17 @@ p{
 }
 
 .student-grades{
+  margin-top: 15px;
+}
+
+.tag{
+  padding: 5px;
+  background-color: rgb(221, 221, 221);
+  margin: 2px 5px;
+  border-radius: 2px;
+  
+}
+
+.tag-form{
   margin-top: 15px;
 }
