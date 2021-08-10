@@ -19,7 +19,7 @@ export default function Card({
     addTag(tag,index);
     event.target.reset();
   } 
-
+  
   return (
     <div className="student-card">
       <div className="student-card-avatar">

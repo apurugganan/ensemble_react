@@ -62,7 +62,7 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-.search-bar-input:focus,
+.search-name-input:focus,
 .tag-form-input:focus,
 .search-tag-input:focus {
   outline: none;
