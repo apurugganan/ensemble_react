@@ -6,9 +6,16 @@ import Card from './Card'
 function App() {
   const [students, setStudents] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchTag, setSearchTag] = useState("");
 
-
+  function addTag(args, index){ 
+    if(!students[index].tags){
+      students[index]['tags'] =[args];
+      setStudents([...students])
+    } else {
+      students[index].tags = [...students[index].tags, args];
+      setStudents([...students])
+    }
+  }
 
   // Get data from API
   useEffect(()=>{
@@ -28,22 +35,14 @@ function App() {
             onChange={event =>{setSearchTerm(event.target.value)} }
             />
         </div>
-        <div>
-        <input className="search-bar-tag-input"
-            type="text" 
-            placeholder="Search by Tag"
-            onChange={event =>{setSearchTag(event.target.value)} }
-            />
-        </div>
         {
           // Search by Name feature
           students.filter(student => {
             if(searchTerm === ""){
-              return student;
+              return student
             } else if (
                 student.firstName.toLowerCase().includes(searchTerm.toLocaleLowerCase())
                 || student.lastName.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-                // || tags.indexOf 
               ){
              
               return student;
@@ -52,10 +51,18 @@ function App() {
             }
             })
             // Display List of Student Cards 
-            .map( (student, index) => { return (
-            // Student Card 
-            <Card student={student} key={index} tags={[]}/>
-          )})
+            .map((student, index) => {  
+            
+              return (
+              // Student Card 
+              <Card 
+                student={student} 
+                key={index} 
+                index={index}
+                addTag={addTag}
+                />
+            )
+          })
         }
       </div>
     </div>

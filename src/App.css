@@ -114,9 +114,14 @@ p{
 }
 
 .student-grades{
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
+.tags{
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
 .tag{
   padding: 5px;
   background-color: rgb(221, 221, 221);
@@ -127,4 +132,8 @@ p{
 
 .tag-form{
   margin-top: 15px;
+}
+
+.tag-form-input{
+  width: 240px;
 }

@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 
-export default function Card({ student, tags }) {
+export default function Card({ 
+  student, 
+  addTag, 
+  index
+}){
   const [clicked, setClicked] = useState(false);
-
-  const [tag, setTag] = useState("")
-  const [tagsArray, setTagsArray] = useState([]);
-
+  const [tag, setTag]=useState("")
+  
+  //---Toggle expandable view
   const toggle = () => {
     setClicked(!clicked);
   };
 
-
-  const addTag = event => {
+  //--- OnSubmit function / action  
+  const handleSubmit = event => {
     event.preventDefault();
-    setTagsArray([...tagsArray, tag]);    
-    tags = tagsArray;
-    console.log(tags)
+    addTag(tag,index);
     event.target.reset();
   } 
 
@@ -52,20 +53,24 @@ export default function Card({ student, tags }) {
                   </p>
                 ))}
           </div>
-          <div>
-            { 
-              tagsArray.map( (tag, index) => 
-                <span className = "tag" key={index}>{tag}</span>)
+
+          <div className="tags">
+            { student.tags 
+              ? student.tags.map((item,index)=>(
+                  <span className="tag" key={index}>{item}</span>)
+                )
+              : null
             }
-          
-            <form className="tag-form" onSubmit={addTag} >
+          </div>
+            <form className="tag-form" onSubmit={handleSubmit} >
               <input 
                 className="tag-form-input"
                 placeholder="Add Tags" 
-                onChange={event => {setTag(event.target.value)}} 
+                onChange={event => {
+                  setTag(event.target.value); 
+                }} 
                 />
-            </form>           
-          </div>
+            </form>                
         </div>
       </div>
       <div className="student-accordion" onClick={toggle}>
