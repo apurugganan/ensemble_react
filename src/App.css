@@ -36,13 +36,13 @@ body{
   overflow-y: scroll;
 }
 
-.search-bar{
+.search-bar, .search-tag{
   display: flex;
   justify-self: start;
-  padding: 15px;
+  padding: 10px 15px;
 }
 
-.search-bar-input, .tag-form-input{
+.search-bar-input, .tag-form-input, .search-tag-input{
   width: 100%;
   border-style: none;
   border-color: none;
