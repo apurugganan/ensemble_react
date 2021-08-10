@@ -74,9 +74,9 @@ export default function Card({
         </div>
       </div>
       <div className="student-accordion" onClick={toggle}>
-        <div className="student-accordion-icon">
+        <button className="student-accordion-button">
           {clicked === false ? "+" : "-"}
-        </div>
+        </button>
       </div>
     </div>
   );

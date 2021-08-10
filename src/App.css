@@ -1,74 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap");
 .App {
   text-align: center;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
-body{
-  font-family: 'Raleway', sans-serif;
+body {
+  font-family: "Raleway", sans-serif;
   background-color: rgb(213, 213, 213);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: none; 
+  background: none;
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background: white;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(150, 150, 150); 
+  background: rgb(150, 150, 150);
 }
 
-.container{
+.container {
   margin-top: 10%;
   background-color: white;
   border-radius: 10px;
   width: 700px;
   height: 550px;
   overflow-y: scroll;
+  position: absolute;
 }
 
-.search-bar, .search-tag{
+.search-bar {
+  position: sticky;
+  top: 0;
+  width: 700px;
+  background-color: white;
+}
+
+.search-name,
+.search-tag {
   display: flex;
   justify-self: start;
   padding: 10px 15px;
 }
 
-.search-bar-input, .tag-form-input, .search-tag-input{
+.search-name-input,
+.tag-form-input,
+.search-tag-input {
   width: 100%;
   border-style: none;
   border-color: none;
   border-bottom: solid rgb(150, 150, 150);
   padding: 5px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
-.search-bar-input:focus, .tag-form-input:focus{
+.search-bar-input:focus,
+.tag-form-input:focus,
+.search-tag-input:focus {
   outline: none;
 }
 
-.student-card{
-  color:black;
+.student-card {
+  color: black;
   display: flex;
-  border-bottom: .10px solid rgb(218, 218, 218);
+  border-bottom: 0.1px solid rgb(218, 218, 218);
 }
 
-.student-card-avatar{
+.student-card-avatar {
   display: flex;
   flex-direction: column;
-  
+
   padding: 20px;
 }
 
-img{
+img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -77,63 +90,64 @@ img{
   border-color: rgb(189, 189, 189);
 }
 
-.student-text{
+.student-text {
   text-align: start;
 }
 
-.student-details{
+.student-details {
   padding-left: 10px;
   padding-bottom: 20px;
 }
 
-.student-name{
+.student-name {
   font-weight: 700;
   margin: 10px 0;
 }
 
-p{
+p {
   margin: 5px;
 }
 
-.student-accordion{
+.student-accordion {
   margin-left: auto;
   display: flex;
   font-size: 50px;
-  color: rgb(189, 189, 189);
   text-align: center;
 }
 
-.student-accordion-icon{
+.student-accordion-button {
   height: 50px;
   width: 50px;
-  margin-top: -5px;
+  color: rgb(189, 189, 189);
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  border-style: none;
 }
-.student-accordion-icon:hover{
+.student-accordion-button:hover {
   cursor: pointer;
   color: black;
 }
 
-.student-grades{
+.student-grades {
   margin-top: 0px;
 }
 
-.tags{
+.tags {
   padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
 }
-.tag{
+.tag {
   padding: 5px;
   background-color: rgb(221, 221, 221);
   margin: 2px 5px;
   border-radius: 2px;
-  
 }
 
-.tag-form{
+.tag-form {
   margin-top: 15px;
 }
 
-.tag-form-input{
+.tag-form-input {
   width: 240px;
 }
