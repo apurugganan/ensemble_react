@@ -66,7 +66,7 @@ function App() {
             .filter(student => {
               if(searchTag === ""){
                 return student
-              } else if (student.tags.includes(searchTag)){
+              } else if (student.tags.join().includes(searchTag)){
                 return student
               } else {
                 return null;
