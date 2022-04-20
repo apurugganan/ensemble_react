@@ -37,18 +37,18 @@ npm start
 
 ## Features
 ### Version 1.0
-1. Scroll:
+1. Scroll: <br>
 ![](https://i.imgur.com/TDWh2AE.gif)
 <br>
 
-2. Search:
+2. Search: <br>
 ![](https://i.imgur.com/nNqTh1g.gif)
 <br>
 
-3. Expandable view:
+3. Expandable view: <br>
 ![](https://i.imgur.com/FgjuYqg.gif)
 
-4. Add and search tags:
+4. Add and search tags: <br>
 ![](https://i.imgur.com/k3VifrW.gif)
 
 ## Developer Notes
