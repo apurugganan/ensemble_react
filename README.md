@@ -1,4 +1,4 @@
-# Ensemble Code Sample
+# ENSEMBLE: Code Sample
 ### Table of Contents
 1. [Description](#description) 
 2. [Technology Stack](#technology-stack)
